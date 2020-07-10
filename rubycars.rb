@@ -4,10 +4,10 @@ def question(call_value)
 end
 
 
-year = question("Year")
+years = question("Year")
 make = question("Make")
 model = question("Model")
 mileage = question("Mileage")
 price = question("Price")
 
-puts "#{year.chomp} #{make.chomp} #{model.chomp} #{mileage.chomp} $#{price.chomp}"
+puts "#{years.chomp} #{make.chomp} #{model.chomp} #{mileage.chomp} $#{price.chomp}"
