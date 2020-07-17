@@ -1,34 +1,57 @@
-class Vehicle
-    attr_accessor :call_vallue, :year, :make, :model, :mileage, :price
+class Questions
+    
+    attr_accessor :vehicle
 
-    def initialize(year, make, model, mileage, price)
-        @year = year
-        @make = make
-        @model = model
-        @mileage = mileage
-        @price= price
-        @call_vallue = @year, @make, @model, @mileage, @price
+    def initialize
+        @vehicle = Vehicle.new
+        @vehicle.year = ask_question("year")
+        @vehicle.make = ask_question("make")
+        @vehicle.model = ask_question("model")
+        @vehicle.color = ask_question("color")
+        @vehicle.price = ask_question("price")
     end 
 
+    def ask_question(value)
+        puts "What is the vehicle's #{value}"
+        gets.chomp
+    end
 end
 
-def question(call_vallue)
-    puts"What #{@call_vallue} is your car?"
-    gets
+class Vehicle
+    attr_accessor :year, :make, :model, :color, :price
+    def initialize
     end
-#class Vehicle
-#   attr_accessor :year, :make, :model, :mileage, :price
-#end
 
-#vehicle1 = Vehicle.new(2006, "Acura", "RSX", 160000, 10000)
+    def to_s
+        "#{@year} #{@make} #{@model} #{@color} #{@price}"
+    end
+end
 
-puts "What year is your car?"
-gets
-puts "What make is your car?"
-gets
-puts "What model is your car?"
-gets
-puts "What is your car's mileage?"
-gets
-puts "What is your car's price?"
-gets
+class Inventory
+    def initialize
+        @vehicles = []
+    end
+
+    def add_vehicle(a_vehicle)
+        @vehicles << a_vehicle
+    end
+
+    def showme
+        puts "There are #{@vehicles.size} vehicles in inventory!"
+    end
+
+    def total
+        @vehicles.each do |vehicles|
+            puts "Displaying: #{@vehicles.size} of #{@vehicles.size} total"
+        end
+    end
+end
+
+
+newcar = Questions.new
+inventory = Inventory.new
+
+
+inventory.add_vehicle(newcar.vehicle)
+inventory.showme
+inventory.total
