@@ -4,11 +4,14 @@ class Inventory
     end
 
     def add_vehicle(a_vehicle)
-        @vehicles << a_vehicle
+        vehicle1 = Inventory.new(@vehicles[1])
+        @vehicles.push(a_vehicle)
     end
 
     def showme
         puts "There are #{@vehicles.size} vehicles in inventory!"
+        puts @vehicles[0]
+        puts @vehicles[1]
     end
 end
 
@@ -27,5 +30,5 @@ end
 #describe Classrom do
  #   it 'has an array of students' do
   #      c = Classroom.new      
-   #     expect(c.students).to eq([])
+   #     expect(v.students).to eq([])
     #end
