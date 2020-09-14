@@ -1,0 +1,57 @@
+Users
+_______
+
+First_name: string
+Last_name: string
+nickname: string
+e-mail: string
+password:string, confirmation:string, digest:string
+a token: string
+
+Users Controller
+
+login, be created, logout, have a profile
+
+Users Model
+has_secure_password
+validate :emails, uniqueness: true
+has_many :reveiws
+has_many :movies
+
+
+movies
+_______
+
+Title :string
+year:integer
+director:string
+description: string
+image:string
+duration:integer
+total_gross:integer
+cast:string
+belong_to user
+
+Movies Controller
+
+index
+show
+create
+update
+destroy
+
+Reviews
+_______
+
+body:string
+rating:float 
+belong_to user
+
+Reviews Controller
+
+index
+show
+create
+update
+destroy
+

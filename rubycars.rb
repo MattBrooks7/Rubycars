@@ -1,16 +1,20 @@
 require_relative 'question'
 require_relative 'inventory'
 require_relative 'vehicle'
+require_relative 'menu'
 
-def vehicle_tell
-    @vehicles.each do |v|
-    end    
-end
-  
-newcar = Questions.new
+
+
+#newcar = Questions.new
+#newcar2 = Questions.new
 inventory = Inventory.new
+menu = Menu.new
 
 
-inventory.add_vehicle(newcar.vehicle)
-inventory.add_vehicle(newcar.vehicle)
-inventory.showme
+
+
+menu.start_up
+#newcar = Questions.new
+#inventory.add_vehicle(newcar.vehicle)
+#inventory.add_vehicle(newcar2.vehicle)
+#inventory.showme

@@ -1,22 +1,21 @@
 class Inventory
+
     def initialize(vehicles= [])
         @vehicles = vehicles
     end
 
     def add_vehicle(a_vehicle)
-        vehicle1 = Inventory.new(@vehicles[1])
         @vehicles.push(a_vehicle)
     end
 
     def showme
         puts "There are #{@vehicles.size} vehicles in inventory!"
-        puts @vehicles[0]
-        puts @vehicles[1]
+        puts @vehicles
     end
 end
 
 
-# To help me fix some things
+# notes to help me try and fix some things
 
 #def add_student(student)
  #   @students.push(student)
